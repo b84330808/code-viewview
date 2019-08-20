@@ -1,0 +1,51 @@
+.container{
+    position: relative;
+    margin: 36px 30px 0 0;
+    width: 400px;
+    height: 500px;
+    background: red;
+}
+div.CodeMirror{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height:100%;
+    border: 1px solid black;
+}
+
+.CodeMirror-focused .cm-matchhighlight {
+    /* background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAFklEQVQI12NgYGBgkKzc8x9CMDAwAAAmhwSbidEoSQAAAABJRU5ErkJggg==);
+    background-position: bottom;
+    background-repeat: repeat-x; */
+    background: rgb(14, 0, 212);
+}
+
+.cm-matchhighlight {
+    background: rgb(0, 9, 61);
+}
+
+.cm-matchhighlighted-by-other{
+    background: rgb(97, 0, 5);
+}
+
+.close-button{
+    position: absolute;
+    top: -25px;
+    right: 0;
+    width: 25px;
+    height: 25px;
+}
+.title{
+    position: absolute;
+    top: -25px;
+    background: #bbb;
+    font-size: 0.9em;
+    left: 0;
+    right: 0;
+    height: 25px;
+    line-height: 25px;
+    border: 1px solid black;
+    padding: 0 5px;
+}

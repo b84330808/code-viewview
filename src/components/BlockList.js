@@ -1,6 +1,9 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import Block from './Block'
+
+import { ResizableBox } from 'react-resizable';
+import './react-resizable.css';
 import { removeBlock } from '../actions'
 import { selectHighlightText } from '../actions'
 
@@ -11,15 +14,19 @@ const style = {
 };
 const BlockList = ({ blocks, highlight_text, removeBlock, selectHighlightText }) => (
   <div style={style}>
+    
+    
     {blocks.map(block =>
-      <Block
-        key={block.id}
-        id={block.id}
-        code={block.code}
-        highlight_text = {highlight_text}
-        removeBlock ={removeBlock}
-        selectHighlightText = {selectHighlightText}
-      />
+      <ResizableBox key={block.id} width={500} height={300} minConstraints={[150, 150]}>
+        <Block
+          
+          id={block.id}
+          code={block.code}
+          highlight_text = {highlight_text}
+          removeBlock ={removeBlock}
+          selectHighlightText = {selectHighlightText}
+        />
+      </ResizableBox>
     )}
   </div>
 )

@@ -49,7 +49,7 @@ class Block extends React.Component {
   render() {
     return (
       <div className="container">
-        <div className="title" contenteditable="true" spellcheck="false">title</div>
+        <div className="title" contentEditable="true" spellCheck="false" suppressContentEditableWarning={true}>title</div>
         <CodeMirror
           value={this.props.code}
           options={options}
